@@ -1,0 +1,79 @@
+/**
+ * style.css
+ * Contains CSS to make site responsive i.e. mobile and tab friendly.
+ */
+.navbar-header{
+    position: relative;
+}
+#mobile-nav-open-btn{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #FFF;
+    font-size: 30px;
+    cursor: pointer;
+    /*hide mobile nav open button by default*/
+    display: none;
+}
+#mobile-nav{
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    overflow-y: hidden;
+    transition: all .3s linear;
+}
+#mobile-nav-close-btn{
+    font-family: "Raleway",sans-serif;
+    font-size: 70px;
+    color: #212226;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: -10px;
+}
+#mobile-nav-content{
+    text-align: center;
+    position: relative;
+    top: 15%;
+}
+#mobile-nav a{
+    font-family: "Raleway",sans-serif;
+    font-size: 18px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+}
+#mobile-nav ul.nav>li.active>a{
+    color: #5C9320;
+    font-weight: 500;
+}
+#mobile-nav-close-btn:hover,
+#mobile-nav-close-btn:focus,
+#mobile-nav a:focus,
+#mobile-nav a:hover{
+    color: #5C9320;
+    background: none;
+}
+
+/*******************************************
+        media queries
+******************************************/
+@media (max-width:767px){
+    #mobile-nav-open-btn{
+        display: block;
+    }
+    .navbar{
+        padding: 20px 0;
+    }
+    .navbar-header{
+        padding: 0 20px;
+    }
+    .navbar.scrolled-navbar{
+        padding: 0;
+    }
+}
